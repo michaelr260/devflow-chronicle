@@ -1,0 +1,52 @@
+# DevFlow Chronicle Configuration Presets
+
+profiles:
+  # Quick daily standup
+  daily:
+    commits: 10
+    formats:
+      - standup
+    style: casual
+    cache_enabled: true
+    session_gap_hours: 3
+
+  # Comprehensive weekly review
+  weekly:
+    commits: 50
+    formats:
+      - weekly
+      - insights
+      - technical
+    style: formal
+    include_quality: true
+    include_temporal: true
+
+  # Performance review preparation
+  review:
+    commits: 100
+    formats:
+      - weekly
+      - insights
+      - technical
+    style: formal
+    include_quality: true
+    include_temporal: true
+    include_team: true
+
+  # Quick bug investigation
+  debug:
+    commits: 30
+    formats:
+      - technical
+    focus_on: bugfix
+    include_search: true
+
+  # Team collaboration analysis
+  team:
+    commits: 100
+    formats:
+      - weekly
+      - insights
+    anonymize: true
+    include_team: true
+    include_collaboration: true
